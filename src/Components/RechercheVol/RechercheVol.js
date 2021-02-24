@@ -3,8 +3,16 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import { UserContext } from "../UserContext";
 import { ResaContext } from "../ResaContext";
+import { ResaProvider } from '../ResaContext';
 
 const RechercheVol = () => {
+
+  const HandleTextChange = ()=>{
+    setresa(InitialContext);
+    console.log(resa)
+
+
+  }
   return (
     <div>
       RechercheVol
@@ -14,23 +22,22 @@ const RechercheVol = () => {
             <Col>
               <Form.Control
                 name="departure"
-                value={resa.departure}
-                onChange={(e) => {
-                  console.log(e.target.value);
-                }}
+                
+               // value={resa.departure}
+                onChange={HandleTextChange}
                 placeholder="Ville de départ"
               />
             </Col>
             <Col>
               <Form.Control
                 name="arrival"
-                value={resa.arrival}
+               // value={resa.arrival}
                 onChange={(e) => {
                   console.log(e.target.value);
                 }}
                 placeholder="Ville d'arrivée"
               />
-              placeholder="Ville d'arrivée" />
+             
             </Col>
             <Col>
               <Form.Control

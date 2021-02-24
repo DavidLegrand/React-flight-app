@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 
 import { UserContext } from "../UserContext";
 import { ResaContext } from "../ResaContext";
+import { ResaProvider } from "../ResaContext";
 
 export const Homepage = () => {
   const addSearchRow = () => {
@@ -22,7 +23,7 @@ export const Homepage = () => {
       <NavigationBar />
       <div></div>
 
-      <ResaContext.Provider value={[resa, setresa]}>
+<ResaProvider>
         <Form.Group controlId="formBasicCheckbox">
           <Form.Check
             checked={checkAllerRetour}
@@ -42,7 +43,9 @@ export const Homepage = () => {
             </div>
           )}
         </Form.Group>
-      </ResaContext.Provider>
+        </ResaProvider>
+
+      
 
       <Pub />
     </div>

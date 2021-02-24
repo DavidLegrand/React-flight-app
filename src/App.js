@@ -6,6 +6,8 @@ import Homepage from './Components/HomePage/Homepage';
 
 import React, { useState } from "react";
 import { UserContext } from './Components/UserContext';
+import { ResaContext } from './Components/ResaContext';
+import { ResaProvider } from './Components/ResaContext';
 //import ContextProvider from "context";
 
 //const defaultDepartureCity = 'Lyon';
@@ -18,9 +20,9 @@ function App() {
         {/*
             <FirstDepartureCity.Provider value={defaultDepartureCity}>
         */}
-        <UserContext.Provider >
+        <ResaContext.Provider >
            <Homepage/>
-        </UserContext.Provider>
+        </ResaContext.Provider>
            {/*
                </FirstDepartureCity.Provider>
            */}
