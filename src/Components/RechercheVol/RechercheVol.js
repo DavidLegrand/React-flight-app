@@ -1,29 +1,36 @@
-import React, {useContext} from "react";
+import React, { useContext, createContext, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import {UserContext} from '../UserContext';
-
-
+import { UserContext } from "../UserContext";
+import { ResaContext } from "../ResaContext";
 
 const RechercheVol = () => {
-  const msg = useContext(UserContext);
-  const onTextChange = (e)=>{
-   // setMsg(e.target.value);
-  msg.ville = e.target.value;
-  }
   return (
     <div>
       RechercheVol
       <Form>
         <Form.Group>
           <Form.Row>
-
             <Col>
-              <Form.Control onChange={onTextChange} placeholder="" />
-              {msg}
+              <Form.Control
+                name="departure"
+                value={resa.departure}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                placeholder="Ville de départ"
+              />
             </Col>
             <Col>
-              <Form.Control placeholder="Ville d'arrivée" />
+              <Form.Control
+                name="arrival"
+                value={resa.arrival}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                placeholder="Ville d'arrivée"
+              />
+              placeholder="Ville d'arrivée" />
             </Col>
             <Col>
               <Form.Control
