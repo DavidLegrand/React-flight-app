@@ -4,14 +4,16 @@ import Col from "react-bootstrap/Col";
 import { UserContext } from "../UserContext";
 import { ResaContext } from "../ResaContext";
 import { ResaProvider } from '../ResaContext';
-
+/* David : Pas besoin du Provider, le provider doit aller dans le JSX racine qui englobe ton app */
 const RechercheVol = () => {
-
+  /* ici, tu dois récupérer la value que tu envoies avec ton provider via un useContext */
+  /* exemple const value = useContext(MonContext) */
+  /* si ta value est un tableau ou un objet, tu peux le récupérer avec du destructuring, genre const [val, val2] = ... */
   const HandleTextChange = ()=>{
+    /* ici tu fais appel à setresa et à resa, mais tu ne les a pas appelés avant */
+    /* ce sont justement les deux valeurs passées dans la value de ton context provider que tu dois récupérer plus haut dans ton useContext */
     setresa(InitialContext);
     console.log(resa)
-
-
   }
   return (
     <div>
