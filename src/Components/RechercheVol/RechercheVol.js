@@ -6,7 +6,9 @@ import { ResaContext } from "../ResaContext";
 import { ResaProvider } from '../ResaContext';
 
 const RechercheVol = () => {
-
+  
+  const [resa, setresa] = useContext(ResaProvider);
+  
   const HandleTextChange = ()=>{
     setresa(InitialContext);
     console.log(resa)
